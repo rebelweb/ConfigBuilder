@@ -25,6 +25,7 @@ namespace ConfigBuilder
                 var line = reader.ReadLine();
                 var values = line.Split(',');
 
+                Console.WriteLine($"// SQL Data Type: {values[5]}");
                 Console.WriteLine($@"builder.Property(prop => prop.{PropertyName(values[3])})
                     .HasColumnName(""{values[3]}"")
                     {ColumnLength(values)}
